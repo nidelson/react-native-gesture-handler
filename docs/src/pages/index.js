@@ -63,7 +63,7 @@ const exampleUrl =
 const playgroundUrl =
   'https://github.com/software-mansion-labs/reanimated-2-playground';
 const tryItOutDecription =
-  'Check out the documentation and learn how to quickly get up and running with Gesture Handler. Take a look at our API guides to get familiarize with it.';
+  'Check out the documentation and learn how to quickly get up and running with Gesture Handler. Take a look at our API guides to get familiar with it.';
 
 function InfoBox({ title, description }) {
   return (
@@ -137,7 +137,7 @@ function SectionBoxes() {
 
 function BannerSection() {
   return (
-    <section>
+    <section className="landing-page__section">
       <div className="container">
         <div className="row">
           <div
@@ -180,7 +180,7 @@ function Home() {
       <Hero />
 
       <main>
-        <section>
+        <section className="landing-page__section">
           <div className="container">
             <div className="row row--box-section">
               <SectionBoxes />
@@ -188,18 +188,14 @@ function Home() {
           </div>
         </section>
         {/* <BannerSection /> */}
-        <section>
+        <section className="landing-page__section">
           <div className="container container--center">
             <div className="row row--center">
               <div className="col col--7 text--center col--bottom-section">
                 <h2>Try it out</h2>
                 <p>{tryItOutDecription}</p>
                 <p>
-                  Try our showcase app or{' '}
-                  <a href="https://snack.expo.io/@adamgrzybowski/react-native-gesture-handler-demo">
-                    get it here using Expo
-                  </a>
-                  . Or {' '}
+                  Try our showcase app -{' '}
                   <Link to={useBaseUrl('docs/#learning-resources')}>check out the learning resources</Link>{' '}
                   to see how you can run it locally with React Native on both
                   Android and iOS.

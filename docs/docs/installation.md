@@ -140,7 +140,7 @@ export default function Example() {
 
 ### Kotlin
 
-Since version `2.0.0` RNGH has been rewritten with Kotlin. The default version of the Kotlin plugin used in this library is `1.5.20`.
+Since version `2.0.0` RNGH has been rewritten with Kotlin. The default version of the Kotlin plugin used in this library is `1.6.21`.
 
 If you need to use a different Kotlin version, set the `kotlinVersion` ext property in `android/build.gradle` file and RNGH will use that version:
 
@@ -148,7 +148,7 @@ If you need to use a different Kotlin version, set the `kotlinVersion` ext prope
 buildscript {
     ext {
         ...
-        kotlinVersion = "1.5.20"
+        kotlinVersion = "1.6.21"
     }
 }
 ```
@@ -170,4 +170,14 @@ For React Native 0.61 or greater, add the library as the first import in your in
 
 ```js
 import 'react-native-gesture-handler';
+```
+
+## Web
+
+There is no additional configuration required for web, however, if you want to try the new (experimental) web implementation of Gesture Handler, you need to enable at the beginning of your index.js file:
+
+```js
+import { enableExperimentalWebImplementation } from 'react-native-gesture-handler';
+
+enableExperimentalWebImplementation(true);
 ```
